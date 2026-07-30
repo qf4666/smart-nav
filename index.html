@@ -227,7 +227,7 @@
         </div>
 
         <footer id="admin-trigger" ondblclick="triggerAdminLogin()" class="text-slate-500 text-xs mt-4 cursor-pointer select-none tracking-wide hover:text-indigo-400/70 transition-colors" title="后台入口 (双击 / Double Click)">
-            <span data-i18n="footerText">&copy; 2026 科技共享-智能生态导航 · Powered by Cloudflare</span> <span id="admin-badge" class="ml-1 text-[10px] px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-400 font-bold hidden" data-i18n="adminBadge">已登入</span>
+            <span data-i18n="footerText">&copy; 智能生态导航 · Powered by Cloudflare</span> <span id="admin-badge" class="ml-1 text-[10px] px-1.5 py-0.5 rounded bg-indigo-500/20 text-indigo-400 font-bold hidden" data-i18n="adminBadge">已登入</span>
         </footer>
     </div>
 
@@ -269,7 +269,7 @@
 
         const i18n = {
             zh: {
-                pageTitle: "科技共享-智能多功能响应式导航", langTitle: "语言 / Language", themeTitle: "基础色彩模式 (本地偏好)",
+                pageTitle: "智能多功能响应式导航", langTitle: "语言 / Language", themeTitle: "基础色彩模式 (本地偏好)",
                 themeLight: "日间", themeDark: "夜间", bgTitle: "自定义背景 (全站同步)", bgInputPlace: "输入图片网址 https://...",
                 applyBtn: "应用", clearBg: "清除壁纸", logoutBtn: "退出后台管理", weatherLoading: "正在定位测算天气...",
                 enGoogle: "谷歌 Google", enBing: "必应 Bing", enBaidu: "百度 Baidu", searchGoogle: "在 Google 中搜索...", searchBing: "在 必应 Bing 中搜索...", searchBaidu: "在 百度 Baidu 中搜索...", searchGithub: "在 GitHub 中搜索仓库...",
@@ -305,8 +305,8 @@
         };
 
         const dynamicLinkDict = {
-            "https://kjgx668.blogspot.com": { zh: "科技共享", en: "TechShare Blog" },
-            "https://kjgx.168668520.xyz": { zh: "科技共享导航", en: "TechShare Nav" },
+            "https://kjgx668.blogspot.com": { zh: "智能导航", en: "TechShare Blog" },
+            "https://kjgx.168668520.xyz": { zh: "智能导航", en: "TechShare Nav" },
             "https://it-toutiao.blogspot.com": { zh: "IT头条博客", en: "IT Toutiao Blog" }
         };
 
@@ -740,7 +740,7 @@
 
         function loadFriendLinks() {
             const container = document.getElementById('friend-links-container'); let linksStr = localStorage.getItem('nav_friend_links'); let links = linksStr ? JSON.parse(linksStr) : []; container.innerHTML = '';
-            if(links.length === 0) { links = [ { name: "IT头条博客", url: "https://it-toutiao.blogspot.com" }, { name: "科技共享导航", url: "https://kjgx.168668520.xyz" } ]; }
+            if(links.length === 0) { links = [ { name: "IT头条博客", url: "https://it-toutiao.blogspot.com" }, { name: "智能导航", url: "https://kjgx.168668520.xyz" } ]; }
             links.forEach((item, index) => {
                 const displayName = getLocalizedLinkName(item.name, item.url);
                 container.innerHTML += `
@@ -750,7 +750,7 @@
                     </div>`;
             });
         }
-        function deleteFriendLink(e, index) { e.preventDefault(); e.stopPropagation(); let linksStr = localStorage.getItem('nav_friend_links'); let links = linksStr ? JSON.parse(linksStr) : []; if(links.length === 0) { links = [ { name: "IT头条博客", url: "https://it-toutiao.blogspot.com" }, { name: "科技共享导航", url: "https://kjgx.168668520.xyz" } ]; } links.splice(index, 1); localStorage.setItem('nav_friend_links', JSON.stringify(links)); loadFriendLinks(); }
+        function deleteFriendLink(e, index) { e.preventDefault(); e.stopPropagation(); let linksStr = localStorage.getItem('nav_friend_links'); let links = linksStr ? JSON.parse(linksStr) : []; if(links.length === 0) { links = [ { name: "IT头条博客", url: "https://it-toutiao.blogspot.com" }, { name: "智能导航", url: "https://kjgx.168668520.xyz" } ]; } links.splice(index, 1); localStorage.setItem('nav_friend_links', JSON.stringify(links)); loadFriendLinks(); }
 
         // --- 初始化运转 ---
         document.addEventListener('click', () => { document.getElementById('engine-menu').classList.add('hidden'); document.getElementById('theme-panel').classList.add('hidden'); });
